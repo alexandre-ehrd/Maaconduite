@@ -1,0 +1,74 @@
+#erreur-conduite-direct-panel,
+#conduite-direct-panel {
+   display: none;
+}
+
+#indicateur-enregistrement {
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   background-color: var(--color-orange);
+   animation: live-reccording-indicator 3s ease-in-out infinite;
+}
+@keyframes live-reccording-indicator {
+   0% {
+      transform: scale(1);
+      opacity: 1;
+   }
+   50% {
+      transform: scale(0.9);
+      opacity: 0.4;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+ 
+
+#button-grid-wrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: var(--padding);
+}
+
+#button-grid-wrapper button, 
+#button-grid-wrapper a {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: var(--padding);
+}
+
+#button-grid-wrapper button i,
+#button-grid-wrapper a i {
+   font-size: 24px;
+}
+
+
+#cta-terminer-conduite {
+   grid-column: span 2;
+}
+
+
+#map {
+   min-height: 300px;
+   border: 1px solid black;
+   z-index: 0;
+}
+
+.map-point-icon {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: var(--color-orange);
+}
+
+
+@media screen and (max-width: 768px) {
+   #button-grid-wrapper {
+      display: flex;
+      flex-direction: column;
+   }
+}
